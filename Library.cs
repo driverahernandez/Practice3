@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace Practice3
         //remove by isbn
         public void RemoveBook(long isbn)
         {
+            
             foreach (var book in Books)
             {
                 if (book.Isbn == isbn)
@@ -39,6 +41,7 @@ namespace Practice3
                     return;
                 }
             }
+            
             throw new BookNotFoundException("Book with given ISBN was not found.");
         }
         public void displayBooksList()

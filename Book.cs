@@ -8,16 +8,16 @@ namespace Practice3
 {
     public class Book
     {
-        public string Title { get; private set; }
-        public string Author { get; private set; }
-        public long Isbn { get; private set; }
+        public string Title { get; }
+        public string Author { get; }
+        public long Isbn { get;  }
         public bool IsCheckedOut { get; set; }
 
         public Book(string title, string author, long isbn)
         {
-            this.Title = title;
-            this.Author = author;
-            this.Isbn = isbn;
+            Title = title;
+            Author = author;
+            Isbn = isbn;
         }
 
         public void displayDetails()
